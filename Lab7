@@ -1,0 +1,25 @@
+def compress_word(word):
+    comp = ""  # Resultado de compresión
+    i = 0  # Puntero para recorrer la cadena
+
+    while i < len(word):
+        char = word[i]  # Caracter actual
+        count = 0  # Contador para caracteres repetidos
+
+        # Contar hasta 9 repeticiones del mismo caracter
+        while i < len(word) and word[i] == char and count < 9:
+            count += 1
+            i += 1
+
+        # Añadir el conteo y el caracter a la cadena comp
+        comp += f"{count}{char}"
+
+    return comp
+
+
+# Ejemplo de uso
+word1 = "abcde"
+word2 = "aaaaaaaaaaaaaabb"
+
+print(compress_word(word1))  # Salida: "1a1b1c1d1e"
+print(compress_word(word2))  # Salida: "9a5a2b"

@@ -24,7 +24,7 @@ int main() {
     int k = removerDuplicados(nums, numsSize);
 
     printf("El número de elementos únicos es: %d\n", k);
-    printf("El arreglo modificado es: ");
+    printf("Arreglo modificado: ");
     for (int i = 0; i < k; i++) {
         printf("%d ", nums[i]);
     }
